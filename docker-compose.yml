@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  api:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: "mysql://root:senha@localhost:3306/jogo_trab"
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: senha
+      MYSQL_DATABASE: jogo_trab
+      MYSQL_PASSWORD: senha
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:

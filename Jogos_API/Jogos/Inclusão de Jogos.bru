@@ -1,0 +1,23 @@
+meta {
+  name: Inclusão de Jogos
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/jogos
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Bearer: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTG9nYWRvSWQiOjQsInVzZXJMb2dhZG9Ob21lIjoiRWRlY2lvIiwiaWF0IjoxNzIwMjIwODMzLCJleHAiOjE3MjAyMjQ0MzN9.QkuIeyRI7LRsvaQq_JDG9tbUFgZdDmiNoQT2DWzrL2Y
+}
+
+body:json {
+  {
+    "nome": "Super Mario",
+    "genero": "Plataforma",
+    "preco": "60"
+  }
+}
